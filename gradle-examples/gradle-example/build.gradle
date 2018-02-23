@@ -31,7 +31,6 @@ allprojects {
   group = 'org.jfrog.example.gradle'
   version = currentVersion
   status = 'Integration'
-}
 
 artifactoryPublish.skip = true
 
