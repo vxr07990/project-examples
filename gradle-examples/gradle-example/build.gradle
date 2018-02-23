@@ -27,9 +27,6 @@ buildscript {
 
 allprojects {
   apply plugin: 'com.jfrog.artifactory'
-  apply plugin: 'idea'
-  configure(subprojects.findAll { new File(it.projectDir, 'src').directory }) {
-    apply plugin: 'java'
   }
   group = 'org.jfrog.example.gradle'
   version = currentVersion
@@ -41,11 +38,7 @@ artifactoryPublish.skip = true
 subprojects {
   apply plugin: 'maven'
 
-  if (project.plugins.hasPlugin('java')) {
-    //manifest.mainAttributes(provider: 'gradle')
-	manifest {
-		attributes 'provider': 'gradle'
-	}
+ 
     configurations {
       published
     }
