@@ -60,7 +60,7 @@ subprojects {
       published javadocJar
     }
   }
-}
+
 
 configurations {
   published
